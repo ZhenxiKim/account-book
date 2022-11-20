@@ -1,0 +1,27 @@
+spring:
+  security:
+    user:
+      name: user
+      password: 1234
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://database-mysql:3306/simple
+    username: root
+    password: simple
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        format_sql: true #logger를 통해 로그 출력
+    generate-ddl: true
+    show-sql: true
+logging :
+  root: info
+  level:
+    org:
+      hibernate:
+        type : INFO
+      springframework:
+        security: INFO
+
